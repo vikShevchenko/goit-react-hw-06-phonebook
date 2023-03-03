@@ -1,0 +1,7 @@
+.search_form{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 10px auto;
+    align-items: flex-start;
+}
