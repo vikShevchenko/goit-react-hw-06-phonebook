@@ -26,6 +26,7 @@ export const SearchForm = () => {
       <label htmlFor="search">Find contacts by name</label>
       <input
         placeholder="Search contact"
+        autoComplete="off"
         id="search"
         type="text"
         onInput={hendleClick}
