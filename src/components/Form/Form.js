@@ -1,13 +1,13 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { setContacts } from "../../redux/userSlise";
-import { nanoid } from "nanoid";
-import './Form.css'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setContacts } from '../../redux/userSlise';
+import { nanoid } from 'nanoid';
+import './Form.css';
 
 const Form = () => {
   const dispatch = useDispatch();
 
-  const hehdle = (e) => {
+  const hehdle = e => {
     e.preventDefault();
     console.log(e.currentTarget.name.value, e.currentTarget.phone.value);
     dispatch(
@@ -24,11 +24,21 @@ const Form = () => {
     <div className="searchForm">
       <h2 className="searchForm_title">Phonebook</h2>
       <form className="searchForm_inputs" onSubmit={hehdle}>
-        <label htmlFor='name'>Name</label>
-        <input id="name" type="text" name="name"></input>
+        <label htmlFor="name">Name</label>
+        <input
+          placeholder="Enter name"
+          id="name"
+          type="text"
+          name="name"
+        ></input>
 
-        <label htmlFor='number'>Number</label>
-        <input id="phone" type="text" name="phone"></input>
+        <label htmlFor="number">Number</label>
+        <input
+          placeholder="Enter number"
+          id="phone"
+          type="text"
+          name="phone"
+        ></input>
         <button type="submit">Add contact</button>
       </form>
     </div>

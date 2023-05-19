@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .App-logo {
@@ -35,4 +38,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+.contacts-title {
+  margin: 0px;
+  padding-top: 10px;
 }
