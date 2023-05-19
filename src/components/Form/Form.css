@@ -28,3 +28,6 @@ input {
   color: white;
   width: 85px;
 }
+.add-btn:hover {
+  background-color: #349e11e8;
+}

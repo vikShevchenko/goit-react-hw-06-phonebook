@@ -27,6 +27,7 @@ const Form = () => {
         <label htmlFor="name">Name</label>
         <input
           placeholder="Enter name"
+          autoComplete="off"
           id="name"
           type="text"
           name="name"
@@ -35,8 +36,9 @@ const Form = () => {
         <label htmlFor="number">Number</label>
         <input
           placeholder="Enter number"
+          autoComplete="off"
           id="phone"
-          type="text"
+          type="number"
           name="phone"
         ></input>
         <button className="add-btn" type="submit">

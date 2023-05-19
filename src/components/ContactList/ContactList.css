@@ -23,9 +23,12 @@
 }
 .dell-btn {
   padding: 5px;
-  background-color: #e1200dc2;
+  background-color: #e11f0dab;
   border-radius: 5px;
   color: white;
   border: none;
   width: 85px;
+}
+.dell-btn:hover {
+  background-color: #e11f0dda;
 }
