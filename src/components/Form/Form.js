@@ -39,7 +39,9 @@ const Form = () => {
           type="text"
           name="phone"
         ></input>
-        <button type="submit">Add contact</button>
+        <button className="add-btn" type="submit">
+          Add contact
+        </button>
       </form>
     </div>
   );

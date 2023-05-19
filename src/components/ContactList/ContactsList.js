@@ -14,7 +14,12 @@ export const ContactsList = () => {
         <li style={{ listStyle: 'none' }} key={item.id}>
           {' '}
           {item.name}: {<a href={`tel:${item.number}`}>{item.number}</a>}{' '}
-          <button onClick={() => dispatch(removeItem(item.id))}>Dell</button>
+          <button
+            className="dell-btn"
+            onClick={() => dispatch(removeItem(item.id))}
+          >
+            Delete
+          </button>
         </li>
       ))}
     </ul>
