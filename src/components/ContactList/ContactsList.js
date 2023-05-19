@@ -1,3 +1,5 @@
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { IconContext } from 'react-icons';
 import { removeItem } from '../../redux/userSlise';
 import React from 'react';
 import { useSelector } from 'react-redux';
@@ -12,8 +14,10 @@ export const ContactsList = () => {
     <ul className="cont_list">
       {search.map(item => (
         <li style={{ listStyle: 'none' }} key={item.id}>
-          {' '}
-          {item.name}: {<a href={`tel:${item.number}`}>{item.number}</a>}{' '}
+          <IconContext.Provider value={{ color: '#349e11ab' }}>
+            <BsFillTelephoneFill />
+          </IconContext.Provider>
+          {item.name}: {<a href={`tel:${item.number}`}>{item.number}</a>}
           <button
             className="dell-btn"
             onClick={() => dispatch(removeItem(item.id))}
