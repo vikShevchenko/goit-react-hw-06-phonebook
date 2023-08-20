@@ -1,25 +1,11 @@
 import React from 'react';
 import './SearchForm.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setFilter } from '../../redux/userSlise';
 
 export const SearchForm = () => {
-  const searchList = useSelector(list => list.user.contacts);
-  const dispatch = useDispatch();
 
-  const hendleClick = e => {
-    if (!e) {
-      return;
-    } else {
-      dispatch(
-        setFilter(
-          searchList.filter(val =>
-            val.name.toLowerCase().includes(e.target.value.toLowerCase())
-          )
-        )
-      );
-    }
-  };
+  const dispatch = useDispatch();
 
   return (
     <div className="search_form">
@@ -29,7 +15,7 @@ export const SearchForm = () => {
         autoComplete="off"
         id="search"
         type="text"
-        onInput={hendleClick}
+        onInput={(e) => dispatch(setFilter(e.target.value))}
       ></input>
     </div>
   );
